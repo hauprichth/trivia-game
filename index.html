@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Trivia Game</title>
+
 </head>
 <body>
-    <div id = "questions"></div>
-    <div id = "answer1"></div>
-    <div id = "answer2"></div>
-    <div id = "answer3"></div>
-    <div id = "answer4"></div>
+    <div id = "question"></div>
+    <div id = "answer1" onclick = "answerQuestion(0)"></div>
+    <div id = "answer2" onclick = "answerQuestion(1)"></div>
+    <div id = "answer3" onclick = "answerQuestion(2)" ></div>
+    <div id = "answer4" onclick = "answerQuestion(3)"></div>
     <div id = "correctAnswer"></div>
+    <div id ="currentScore"></div>
+    <button type="button" onclick = "nextQuestion()">Next Question!</button>
+<script src="index.js">    
 </body>
 </html>
