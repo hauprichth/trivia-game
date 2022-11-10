@@ -97,10 +97,11 @@ function renderQuestion() {
         answer2.innerHTML = questionObject.answers[1];
          answer3.innerHTML = questionObject.answers[2];
         answer4.innerHTML = questionObject.answers[3];
+        correctAnswer.innerHTML= ' ';
     };
 function showScore(){
         let scoreCard = document.getElementById('currentScore');
-        scoreCard.innerHTML = 'currentScore' + 'currentScore';
+        scoreCard.innerHTML = 'Current Score:' + currentScore;
     }
 function answerQuestion(answerIndex){
     let questionObject = pullQuestion();
@@ -108,12 +109,11 @@ function answerQuestion(answerIndex){
     let correctAnswer = questionObject.correctAnswer;
     let winner = document.getElementById('correctAnswer');
       winner.innerHTML = correctAnswer;
-      if(selectedAnswer === correctAnswer) {currentScore++;}
+      if(selectedAnswer === correctAnswer) {currentScore+=100;}
     showScore();
 }
  renderQuestion();
  function nextQuestion(){ 
     currentQuestionIndex++;
     renderQuestion();
-
 }
