@@ -80,10 +80,40 @@ let allQuestions = [
         correctAnswer:"Irish"
         }
 ];
-let currentQuestionIndex = 0 
-function pullQuestion(allQuestions, currentQuestionIndex){
-    removeInnerHTML();
+let currentQuestionIndex = 0;
+let currentScore = 0; 
+function pullQuestion(){return allQuestions[currentQuestionIndex];
+}
+
+function renderQuestion() {
+        let questionElement = document.getElementById('question');
+        let questionObject = pullQuestion();
+         questionElement.innerHTML = questionObject.question;
+        let answer1 = document.getElementById('answer1');
+         let answer2 = document.getElementById('answer2');
+        let answer3 = document.getElementById('answer3');
+        let answer4 = document.getElementById('answer4');
+         answer1.innerHTML = questionObject.answers[0];
+        answer2.innerHTML = questionObject.answers[1];
+         answer3.innerHTML = questionObject.answers[2];
+        answer4.innerHTML = questionObject.answers[3];
+    };
+function showScore(){
+        let scoreCard = document.getElementById('currentScore');
+        scoreCard.innerHTML = 'currentScore' + 'currentScore';
+    }
+function answerQuestion(answerIndex){
+    let questionObject = pullQuestion();
+    let selectedAnswer = questionObject.answers[answerIndex];
+    let correctAnswer = questionObject.correctAnswer;
+    let winner = document.getElementById('correctAnswer');
+      winner.innerHTML = correctAnswer;
+      if(selectedAnswer === correctAnswer) {currentScore++;}
+    showScore();
+}
+ renderQuestion();
+ function nextQuestion(){ 
+    currentQuestionIndex++;
+    renderQuestion();
 
 }
-let questionElement = getElementById('questions');
-questionElement.innerHTML=questionText;
