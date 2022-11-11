@@ -108,7 +108,7 @@ function answerQuestion(answerIndex){
     let selectedAnswer = questionObject.answers[answerIndex];
     let correctAnswer = questionObject.correctAnswer;
     let winner = document.getElementById('correctAnswer');
-      winner.innerHTML = correctAnswer;
+      winner.innerHTML = 'Correct Answer:' + correctAnswer;
       if(selectedAnswer === correctAnswer) {currentScore+=100;}
     showScore();
 }
