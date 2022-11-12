@@ -60,8 +60,8 @@ let allQuestions = [
         correctAnswer:"Dionysus"
         },
     {   question:"In what country would you find Mount Fuji?",
-        answers:["Fiji", "Tanzania", "Botswana", "Myanmar"],
-        correctAnswer: "Fiji"
+        answers:["Japan", "Tanzania", "Botswana", "Myanmar"],
+        correctAnswer: "Japan"
         },
     {   question:"How many bones does a horse have?",
         answers:["206", "205", "215", "200"],
